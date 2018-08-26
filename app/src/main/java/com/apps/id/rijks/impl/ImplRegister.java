@@ -1,9 +1,9 @@
 package com.apps.id.rijks.impl;
 
 import android.support.annotation.NonNull;
-import android.text.TextUtils;
 
 import com.apps.id.rijks.presenter.PresenterRegister;
+import com.apps.id.rijks.ui.util.TextUtil;
 import com.apps.id.rijks.viewhelper.ViewHelperRegister;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,8 +25,8 @@ public class ImplRegister implements PresenterRegister, OnCompleteListener<AuthR
 
     @Override
     public void register(String email, String password, boolean isTncChecked) {
-        boolean isUserNameEmpty = TextUtils.isEmpty(email);
-        boolean isPasswordEmpty = TextUtils.isEmpty(password);
+        boolean isUserNameEmpty = TextUtil.isEmptyOrNull(email);
+        boolean isPasswordEmpty = TextUtil.isEmptyOrNull(password);
 
         if (isUserNameEmpty) {
             viewHelper.showEmailEmptyMessage();
@@ -58,7 +58,8 @@ public class ImplRegister implements PresenterRegister, OnCompleteListener<AuthR
         if (task.isSuccessful()) {
             viewHelper.showSuccessRegister();
         } else {
-            viewHelper.showRegisterFailedMessage();
+            String errorMessage = TextUtil.isEmptyOrNull(task.getException().getMessage()) ? "An Error Has Occurred" : task.getException().getMessage();
+            viewHelper.showRegisterFailedMessage(errorMessage);
         }
     }
 }

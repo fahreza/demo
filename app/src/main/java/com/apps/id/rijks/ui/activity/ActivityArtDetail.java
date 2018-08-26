@@ -3,11 +3,11 @@ package com.apps.id.rijks.ui.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.apps.id.rijks.R;
+import com.apps.id.rijks.ui.util.TextUtil;
 import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
@@ -39,7 +39,7 @@ public class ActivityArtDetail extends ActivityBase {
         String urlImage = getIntent().getStringExtra(EXTRA_URL_IMAGE);
         String title = getIntent().getStringExtra(EXTRA_TITLE);
 
-        if (!TextUtils.isEmpty(urlImage) && !TextUtils.isEmpty(title)) {
+        if (!TextUtil.isEmptyOrNull(urlImage) && !TextUtil.isEmptyOrNull(title)) {
             Glide.with(this).load(urlImage).into(mImgThumbnail);
             mTxtTitle.setText(title);
         }

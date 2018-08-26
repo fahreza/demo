@@ -98,8 +98,8 @@ public class ActivityLogin extends ActivityBase implements ViewHelperLogin, View
     }
 
     @Override
-    public void showAuthFailedMessage() {
-        Snackbar.make(mCoordinatorLayout, R.string.error_auth, Snackbar.LENGTH_LONG).show();
+    public void showAuthFailedMessage(String message) {
+        Snackbar.make(mCoordinatorLayout, message, Snackbar.LENGTH_LONG).show();
     }
 
     @Override

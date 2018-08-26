@@ -1,9 +1,9 @@
 package com.apps.id.rijks.impl;
 
 import android.support.annotation.NonNull;
-import android.text.TextUtils;
 
 import com.apps.id.rijks.presenter.PresenterLogin;
+import com.apps.id.rijks.ui.util.TextUtil;
 import com.apps.id.rijks.viewhelper.ViewHelperLogin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,8 +25,8 @@ public class ImplLogin implements PresenterLogin, OnCompleteListener<AuthResult>
 
     @Override
     public void doLogin(String email, String password) {
-        boolean isUserNameEmpty = TextUtils.isEmpty(email);
-        boolean isPasswordEmpty = TextUtils.isEmpty(password);
+        boolean isUserNameEmpty = TextUtil.isEmptyOrNull(email);
+        boolean isPasswordEmpty = TextUtil.isEmptyOrNull(password);
 
         if (isUserNameEmpty) {
             viewHelper.showEmailEmptyMessage();
@@ -52,7 +52,8 @@ public class ImplLogin implements PresenterLogin, OnCompleteListener<AuthResult>
         if (task.isSuccessful()) {
             viewHelper.showSuccessLoggedIn();
         } else {
-            viewHelper.showAuthFailedMessage();
+            String errorMessage = TextUtil.isEmptyOrNull(task.getException().getMessage()) ? "An Error Has Occurred" : task.getException().getMessage();
+            viewHelper.showAuthFailedMessage(errorMessage);
         }
     }
 }

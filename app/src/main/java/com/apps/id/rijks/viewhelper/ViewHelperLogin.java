@@ -14,7 +14,7 @@ public interface ViewHelperLogin {
 
     void hidePasswordEmptyMessage();
 
-    void showAuthFailedMessage();
+    void showAuthFailedMessage(String message);
 
     void showSuccessLoggedIn();
 

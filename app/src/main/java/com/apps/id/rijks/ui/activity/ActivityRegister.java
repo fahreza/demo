@@ -89,8 +89,8 @@ public class ActivityRegister extends ActivityBase implements View.OnClickListen
     }
 
     @Override
-    public void showRegisterFailedMessage() {
-        Snackbar.make(mCoordinatorLayout, R.string.error_auth, Snackbar.LENGTH_LONG).show();
+    public void showRegisterFailedMessage(String message) {
+        Snackbar.make(mCoordinatorLayout, message, Snackbar.LENGTH_LONG).show();
     }
 
     @Override

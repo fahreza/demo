@@ -14,7 +14,7 @@ public interface ViewHelperRegister {
 
     void hidePasswordEmptyMessage();
 
-    void showRegisterFailedMessage();
+    void showRegisterFailedMessage(String message);
 
     void showSuccessRegister();
 
