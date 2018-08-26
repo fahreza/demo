@@ -1,4 +1,4 @@
-package com.apps.id.rijks.ui;
+package com.apps.id.rijks.ui.adapter;
 
 import android.content.Context;
 import android.content.Intent;

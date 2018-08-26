@@ -19,7 +19,7 @@ import com.apps.id.rijks.R;
 import com.apps.id.rijks.impl.ImplHome;
 import com.apps.id.rijks.model.ArtObjectsItem;
 import com.apps.id.rijks.presenter.PresenterHome;
-import com.apps.id.rijks.ui.AdapterArt;
+import com.apps.id.rijks.ui.adapter.AdapterArt;
 import com.apps.id.rijks.viewhelper.ViewHelperHome;
 
 import java.util.ArrayList;
