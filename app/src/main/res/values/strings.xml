@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">Rijks Museum</string>
+
+    <string name="action_yes">YES</string>
+    <string name="action_no">NO</string>
+    <string name="msg_loading">Loading</string>
+
     <!-- Login -->
-    <string name="hint_user_name">Username</string>
+    <string name="error_email_empty">Email should not be empty</string>
+    <string name="error_password_empty">Password should not be empty</string>
+    <string name="error_auth">An Error has occurred</string>
+    <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="msg_have_account">Don’t have account ?</string>
     <string name="msg_register">Register</string>
@@ -9,14 +17,23 @@
     <string name="title_login">LOGIN</string>
 
     <!-- Register -->
-    <string name="title_register">Register</string>
+    <string name="error_tnc">Term and Condition should be checked</string>
     <string name="msg_term_condition">I Agree with Terms and Condition</string>
+    <string name="msg_success_register">Success! You are registered!</string>
+    <string name="title_register">Register</string>
 
     <!-- Profile -->
     <string name="action_logout">Logout</string>
+    <string name="msg_logout">Are you sure want to logout?</string>
 
     <!-- Drawer -->
     <string name="drawer_home">Home</string>
     <string name="drawer_profile">Profile</string>
+    <string name="msg_welcome">Welcome %s</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Art Detail -->
+    <string name="title_detail">Detail</string>
 
 </resources>

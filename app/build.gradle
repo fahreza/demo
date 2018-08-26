@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 //Version information
 def versionMajor = 0
@@ -7,7 +8,7 @@ def versionPatch = 0
 
 android {
     compileSdkVersion rootProject.targetSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
+    buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "com.apps.id.rijks"
         minSdkVersion rootProject.minSdkVersion
@@ -31,6 +32,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "mode"
+
+    productFlavors {
+        dev {
+            buildConfigField "String", "HOSTNAME", "\"https://www.rijksmuseum.nl/\""
+        }
+        production {
+            buildConfigField "String", "HOSTNAME", "\"https://www.rijksmuseum.nl/\""
+        }
+    }
 }
 
 dependencies {
@@ -52,7 +64,12 @@ dependencies {
     implementation "com.orhanobut:hawk:$rootProject.hawkVersion"
     implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
 
+    implementation "com.google.firebase:firebase-core:$rootProject.firebaseVersion"
+    implementation "com.google.firebase:firebase-auth:$rootProject.firebaseVersion"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+apply plugin: 'com.google.gms.google-services'

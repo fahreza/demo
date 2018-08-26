@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "229059112676",
+    "firebase_url": "https://rijks-museum.firebaseio.com",
+    "project_id": "rijks-museum",
+    "storage_bucket": "rijks-museum.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229059112676:android:058f5ae0f2f3c73d",
+        "android_client_info": {
+          "package_name": "com.apps.id.rijks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229059112676-nci4c516jn6389d39g0d3esns493jnns.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.id.rijks",
+            "certificate_hash": "4a4e1aebb647fc946203e71a0e86dc0a668ae16d"
+          }
+        },
+        {
+          "client_id": "229059112676-5ipvlfu0attdt19dm601o3kjvmaie31r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJZyXoylI_Rt5W8tzOauy8GH84UqigAgE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229059112676-5ipvlfu0attdt19dm601o3kjvmaie31r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
