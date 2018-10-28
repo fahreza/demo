@@ -8,7 +8,7 @@ def versionPatch = 0
 
 android {
     compileSdkVersion rootProject.targetSdkVersion
-    buildToolsVersion '28.0.2'
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.apps.id.rijks"
         minSdkVersion rootProject.minSdkVersion
