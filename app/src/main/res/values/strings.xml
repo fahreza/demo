@@ -35,5 +35,6 @@
 
     <!-- Art Detail -->
     <string name="title_detail">Detail</string>
+    <string name="title_detail_sub">Detail</string>
 
 </resources>
